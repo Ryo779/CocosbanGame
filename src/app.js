@@ -8,8 +8,7 @@ var level = [
   [1, 0, 0, 1, 1, 1, 1],
   [1, 1, 1, 1, 1, 1, 1]
 ];
-var map{} = level; //初期状態のマップ
-var playerPosition; //マップ内のプレイやの位置(ｘ、ｙ)を保持する
+var playerPosition; //マップ内のプレイヤの位置(ｘ、ｙ)を保持する
 var playerSprite; //プレイヤーのスプライト
 var cratesArray = []; //配置した木箱のスプライトを配列に保持する
 
@@ -146,12 +145,13 @@ switch(level[playerPosition.y+deltaY][playerPosition.x+deltaX]){
     case 5:
         if(level[playerPosition.y+deltaY*2][playerPosition.x+deltaX*2]==0 ||
            level[playerPosition.y+deltaY*2][playerPosition.x+deltaX*2]==2){
-            level[playerPosition.y][playerPosition.x]-=4;
+            level[playerPosition.y][playerPosition.x]-=4;//プレイヤーのいた場所が床になる
             playerPosition.x+=deltaX;
             playerPosition.y+=deltaY;
-            level[playerPosition.y][playerPosition.x]+=1;
+            level[playerPosition.y][playerPosition.x]+=1;//木箱の位置にプレイヤー
             playerSprite.setPosition(165+25*playerPosition.x,185-25*playerPosition.y);
-            level[playerPosition.y+deltaY][playerPosition.x+deltaX]+=3;
+            level[playerPosition.y+deltaY][playerPosition.x+deltaX]+=3;//木箱（３）の移動先　
+            if( level[playerPosition.y+deltaY][playerPosition.x+deltaX]==5 ){}
             var movingCrate = cratesArray[playerPosition.y][playerPosition.x];
             movingCrate.setPosition(movingCrate.getPosition().x+25*deltaX,movingCrate.
             getPosition().y-25*deltaY);
