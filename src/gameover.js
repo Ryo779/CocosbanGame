@@ -4,7 +4,7 @@ var ThirdLayer = cc.Layer.extend({
         this._super();
         var size = cc.director.getWinSize();
 
-        var label = cc.LabelTTF.create("STAGE　CLEAR！", "Arial", 40);
+        var label = cc.LabelTTF.create("＼ STAGE CLEAR ／", "Arial", 40);
         label.setPosition(size.width / 2, size.height * 4 / 5);
         this.addChild(label, 1);
 

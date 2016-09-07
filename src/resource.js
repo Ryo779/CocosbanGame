@@ -1,8 +1,8 @@
 var res = {
     spritesheet_plist : "res/spritesheet.plist",
     spritesheet_png : "res/spritesheet.png",
-    se_down: "res/button25.mp3",
-    bgm:"res/ワイルドアームズ.mp3",
+    se_down: "res/buttonSE.mp3",
+    bgm:"res/きみのためなら死ねる.mp3",
 
 };
 

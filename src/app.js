@@ -2,9 +2,9 @@ var size;
 var level = [
   [1, 1, 1, 1, 1, 1, 1],
   [1, 1, 0, 0, 0, 0, 1],
-  [1, 1, 3, 3, 2, 0, 1],
-  [1, 0, 0, 4, 0, 0, 1],
-  [1, 0, 0, 1, 0, 2, 1],
+  [1, 1, 0, 0, 2, 0, 1],
+  [1, 0, 0, 4, 3, 0, 1],
+  [1, 0, 3, 1, 0, 2, 1],
   [1, 0, 0, 1, 1, 1, 1],
   [1, 1, 1, 1, 1, 1, 1]
 ];
@@ -190,16 +190,16 @@ switch(level[playerPosition.y+deltaY][playerPosition.x+deltaX]){
 //宇宙船を元の位置に戻して、宇宙船の変数を初期化する
 function restartGame() {
   //audioEngine.playEffect(res.se_miss);
-  console.log("戻れ");
+  console.log("");
   /*cratesArray[playerPosition.y][playerPosition.x]=null;
   playerSprite.setPosition(240, 115);*/
   cc.director.runScene(new gameScene());
   level = [
     [1, 1, 1, 1, 1, 1, 1],
     [1, 1, 0, 0, 0, 0, 1],
-    [1, 1, 3, 3, 2, 0, 1],
-    [1, 0, 0, 4, 0, 0, 1],
-    [1, 0, 0, 1, 0, 2, 1],
+    [1, 1, 0, 0, 2, 0, 1],
+    [1, 0, 0, 4, 3, 0, 1],
+    [1, 0, 3, 1, 0, 2, 1],
     [1, 0, 0, 1, 1, 1, 1],
     [1, 1, 1, 1, 1, 1, 1]
   ];
