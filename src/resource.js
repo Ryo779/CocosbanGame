@@ -1,9 +1,7 @@
 var res = {
     spritesheet_plist : "res/spritesheet.plist",
     spritesheet_png : "res/spritesheet.png",
-    se_down: "res/buttonSE.mp3",
-    bgm:"res/きみのためなら死ねる.mp3",
-
+    bgm_main : "res/アートコア神社.mp3"
 };
 
 var g_resources = [];
